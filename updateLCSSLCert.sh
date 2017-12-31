@@ -12,8 +12,8 @@
 #
 ###############################################################
 
-LC_DOMAIN="kiefer-networks.de"
-LC_VHOSTS_PATH="/etc/apache2/sites-available/kn1.conf"
+LC_DOMAIN="example.de"
+LC_VHOSTS_PATH="/etc/apache2/sites-available/example.conf"
 
 ###############################################################
 ########	Do not modify after this line		#######
