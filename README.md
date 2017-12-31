@@ -24,6 +24,17 @@ The last command shows the status from liveconfig. If there is an error, run thi
 ```bash
 rm /etc/liveconfig/sslcert.pem && service liveconfig restart
 ```
+
+### Cron
+At this time, the easiest way is to do this every every 4th hour.
+Do as root
+```bash
+crontab -e
+```
+add this line:
+```bash
+0 */4 * * * /bin/bash /path/to/file/updateLCSSLCert.sh
+```
 ## Todo
 * [ ] MySQL SSL Setup
 * [ ] Call arguments
