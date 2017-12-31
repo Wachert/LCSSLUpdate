@@ -1,6 +1,6 @@
 # [LiveConfig](https://www.liveconfig.com/]) Let's Encrypt Cert for Backend System
 This script takes from a vhost / domain the LE Cert an create the SSL Cert for the LiveConfig backend.
-In addition, it implements the SSL configuration for the MySQL server and sets the ciper-list to PCI compliant.
+In addition, it implements the SSL configuration for the MySQL server and harding the cipherlist.
 
 # The script currently only supports Debian and Apache! Not for Nginx and / or CentOS / Fedora / RHEL
 
@@ -19,9 +19,9 @@ LC_VHOSTS_PATH="/etc/apache2/sites-available/example.conf"
 
 ## Usage
 
-If you don't want to use the PCI compliant for MySQL remove this line (89)
+If you don't want to use the cipherlist for MySQL remove this line (89)
 ```bash
-ssl-cipher=!aNULL:!eNULL:!EXPORT:!ADH:!DES:!DSS:!LOW:!SSLv2:RC4-SHA:RC4-MD5:ALL
+ssl-cipher=DHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA!aNULL:!eNULL:!EXPORT:!ADH:!DES:!DSS:!LOW:!SSLv2:RC4-SHA:RC4-MD5:ALL
 ```
 To run the script, do 
 ```bash
