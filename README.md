@@ -18,6 +18,13 @@ LC_VHOSTS_PATH="/etc/apache2/sites-available/example.conf"
 * **LC_VHOSTS_PATH** ==> the path to the vhost config for the **LC_DOMAIN**
 
 ## Usage
+
+If you don't want to use the PCI compliant for MySQL remove this line
+```bash
+ssl-cipher=!aNULL:!eNULL:!EXPORT:!ADH:!DES:!DSS:!LOW:!SSLv2:RC4-SHA:RC4-MD5:ALL
+```
+https://github.com/beli3ver/LCSSLUpdate/blob/20d74eaf8357b910ad6f3da944a3dfa6df952aea/updateLCSSLCert.sh#L89
+
 To run the script, do 
 ```bash
 ./updateLCSSLCert.sh
