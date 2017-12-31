@@ -86,7 +86,7 @@ ssl=1
 ssl-ca=/etc/mysql/ssl/ca.pem
 ssl-cert=/etc/mysql/ssl/crt.pem
 ssl-key=/etc/mysql/ssl/key.pem
-ssl-cipher=!aNULL:!eNULL:!EXPORT:!ADH:!DES:!DSS:!LOW:!SSLv2:RC4-SHA:RC4-MD5:ALL
+ssl-cipher=DHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA!aNULL:!eNULL:!EXPORT:!ADH:!DES:!DSS:!LOW:!SSLv2:RC4-SHA:RC4-MD5:ALL
 EOF
 
 ###################
