@@ -1,4 +1,4 @@
-# LCSSLUpdate
+# (LiveConfig)[https://www.liveconfig.com/] LE Cert for Backend System
 This script takes from a vhost / domain the LE Cert an create the SSL Cert for the LiveConfig backend.
 # The script currently only supports Debian and Apache! Not for Nginx and / or CentOS / Fedora / RHEL
 
