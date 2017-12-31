@@ -19,12 +19,10 @@ LC_VHOSTS_PATH="/etc/apache2/sites-available/example.conf"
 
 ## Usage
 
-If you don't want to use the PCI compliant for MySQL remove this line
+If you don't want to use the PCI compliant for MySQL remove this line (89)
 ```bash
 ssl-cipher=!aNULL:!eNULL:!EXPORT:!ADH:!DES:!DSS:!LOW:!SSLv2:RC4-SHA:RC4-MD5:ALL
 ```
-https://github.com/beli3ver/LCSSLUpdate/blob/20d74eaf8357b910ad6f3da944a3dfa6df952aea/updateLCSSLCert.sh#L89
-
 To run the script, do 
 ```bash
 ./updateLCSSLCert.sh
