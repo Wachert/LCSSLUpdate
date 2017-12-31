@@ -13,7 +13,7 @@ LC_DOMAIN="example.de"
 LC_VHOSTS_PATH="/etc/apache2/sites-available/example.conf"
 ```
 * **LC_DOMAIN** ==> the domain for liveconifg ==> example.de:8443
-* **LC_VHOSTS_PATH** ==> the path to the vhost config for the **LC_DOMAIN** domain
+* **LC_VHOSTS_PATH** ==> the path to the vhost config for the **LC_DOMAIN**
 
 ## Usage
 To run the script, do 
