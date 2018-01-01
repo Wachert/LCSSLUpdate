@@ -19,7 +19,7 @@ LC_VHOSTS_PATH="/etc/apache2/sites-available/example.conf"
 
 ## Usage
 
-If you don't want to use the cipherlist for MySQL remove this line (89)
+If you don't want to use the cipherlist for MySQL remove this line (98)
 ```bash
 ssl-cipher=DHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA!aNULL:!eNULL:!EXPORT:!ADH:!DES:!DSS:!LOW:!SSLv2:RC4-SHA:RC4-MD5:ALL
 ```
@@ -27,6 +27,13 @@ To run the script, do
 ```bash
 ./updateLCSSLCert.sh
 ```
+You can run the script with following parameter:
+
+```bash
+./updateLCSSLCert.sh --no-mysql / -nm => run without the mysql setup
+./updateLCSSLCert.sh --cron /-c => run at cron modus / check if there is a new cert then update
+```
+#### Attention: you can not run ./updateLCSSLCert.sh --cron with --no-mysql !!!
 The last command shows the status from liveconfig. If there is an error, run this command to set all back to default:
 ```bash
 rm /etc/liveconfig/sslcert.pem && service liveconfig restart
@@ -40,11 +47,13 @@ crontab -e
 ```
 add this line:
 ```bash
-0 */4 * * * /bin/bash /path/to/file/updateLCSSLCert.sh
+*/5 * * * * /bin/bash /path/to/file/updateLCSSLCert.sh --cron
 ```
 ## Todo
 * [X] MySQL SSL Setup
-* [ ] Call arguments
+* [X] Call arguments
+    * [X] --cron / -c 
+    * [X] --no-mysql / -nm
     * [ ] --domain=exmaple.de
     * [ ] --vhost-file=/etc/apache2/sites-available/example.conf
 * [ ] Support
